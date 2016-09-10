@@ -1,6 +1,318 @@
 @import "reset";
 @import "syntax";
+@import "mixin/_responsive";
+@import "variables";
+@import "fonts";
+@import "colors";
+@import "bootstrap";
 
 body {
-    background: white;
+    
+  .section-about-hero {
+    height: 500px;
+    width: 100%;
+    background-color: grey;
+    padding-top:20px;
+    @include respond(small-only) {
+      height: 500px;
+    }       
+    .hero-content{ 
+      h1{
+      padding-top:70px;
+      font-size:70px;
+      font-family:$proxima-font-stack;
+      color:$sbx-navy;
+      font-weight: 900;
+      @include respond(small-only) {
+        padding-left:30px;
+        font-size:40px;
+        } 
+      }
+      p{
+      width:700px;
+      font-size:20px;
+      font-family:$proxima-font-stack;
+      color:$sbx-navy;
+      @include respond(small-only) {
+        width:350px;
+        padding-left:30px;
+        padding-top:20px;
+        font-size:15px;
+        }                
+      }
+      .button1{
+        @include respond(small-only) {
+        padding-left:0px;
+        padding-top:20px;
+        text-align:center;
+        }         
+      }
+    }
+  }
+
+  .section-drive{
+    .what-drives-us{
+      padding-top:120px;
+      @include respond(small-only) {
+        padding-top:20px;
+        text-align:center;
+      }
+      h2{
+        font-size:50px;
+        font-family:$proxima-font-stack;
+        color:$sbx-navy;
+        font-weight: 900;        
+        @include respond(medium-down) {  
+          text-align:center;  
+        }
+      }
+      p{
+        padding-right: 200px;
+        padding-top:20px;
+        font-size:20px;
+        font-family:$proxima-font-stack;
+        color:$sbx-navy;       
+        @include respond(medium-down) {  
+          padding-left:100px;
+          padding-right:100px;
+        }
+        @include respond(small-only) {
+          padding-top:20px;
+          font-size:20px;
+          padding:20px;  
+        }        
+      }
+    }
+
+    .objectives {
+      padding-top: 130px;
+      background-color: $background-grey;
+      @include respond(small-only) {
+        padding-top:50px;
+      } 
+      h2{
+        padding-left:100px;
+        text-decoration: underline;
+        color:$sbx-teal;
+        font-family:$proxima-font-stack;
+        font-weight: 900; 
+        @include respond(small-only) {
+          text-align:center;
+          padding-left:0px;
+        }
+        span{
+          text-decoration: underline;
+          width:0px;
+        }    
+      }
+      
+      h3{
+        padding-left:70px;
+        color:$sbx-navy;
+        font-family:$proxima-font-stack;
+        @include respond(small-only) {
+           font-size:40px;
+           text-align:center;
+           padding-left:0px;
+        }        
+      }
+
+      h4{
+        padding-left:70px;
+        color:$sbx-navy;
+        font-family:$proxima-font-stack;
+        @include respond(small-only) {
+           font-size:30px;
+           text-align:center;
+           padding-top:10px;
+           padding-left:0px;
+        }  
+      }
+      p {
+        padding-left:70px;
+        padding-right:100px;
+        color:$sbx-navy;
+        font-family:$proxima-font-stack;
+        @include respond(small-only) {
+          padding-top:15px;
+          text-align:center; 
+          font-size:20px;
+          padding-left:0px;
+          padding-right:0px;
+          margin:20px;
+        }                          
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 60px;
+        padding-left: 75px;
+        background-color: $stroke-grey;
+        height: 100px;
+        @include respond(small-only) {
+          margin-top: 70px;
+          text-align:center;
+          padding-left:0px;
+        }  
+
+        li {
+          font-size:30px;
+          font-weight: bold;
+          display: inline;
+          padding-right: 20px;
+          line-height: 100px;
+          vertical-align: middle;
+          font-weight: bold;          
+          @include respond(small-only) {
+            padding-right: 10px; 
+          }
+          a{
+            color: $silver;
+          }
+          a:hover{
+            color:$sbx-teal
+          } 
+          a:active { 
+            color: $sbx-teal;
+          } 
+        }
+      }
+    }
+  }
+
+
+  .section-philosophy {    
+    background-color: $sbx-teal;
+    padding-top: 50px;
+    color: $white;
+    text-align: center;
+    height: 200px;
+    h2{
+      font-family:$proxima-font-stack;
+      color:white;
+      font-weight: 900;
+    }
+  }
+
+  .angle {
+    background-color:$background-grey;;
+    width: 0;
+    height: 0;
+    margin-left: -15vw;
+    border-right: 75vw solid transparent;
+    border-top: 70px solid #00ABA1;
+    border-left: 40vw solid transparent;
+  }
+
+
+  .section-leadership {
+    background-color: #F4F4F4;
+    h2 {
+      font-size:68px;
+      font-family:$proxima-font-stack;
+      color:$sbx-navy;
+      font-weight: 900;
+      padding-bottom:20px;
+      padding-top:20px;
+      @include respond(small-only) {
+        font-size:40px;
+      }  
+    }
+    .leader{
+      img{
+        @include respond(medium) {
+          width:350px;
+        }   
+        @include respond(medium-down) {
+          width:300px;
+        }                 
+      }
+      p{
+        margin-bottom:10px;
+      }   
+    }
+    h3 {
+      font-weight: bold;
+      color: $sbx-teal;
+    }
+
+    p {
+      margin-bottom: 60px;
+    }
+    .want-to-work-with-us {
+      height: 180px;
+      margin-top: 70px;
+      padding-top: 5px;
+      padding-bottom: 65px;
+      background-color: $white;
+      h2 {
+        font-size:40px;
+        margin: 0px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  aside {
+    height: 350px;
+    margin-top: 120px;
+    text-align:center;
+    h2{
+      font-size:40px;
+      font-family:$proxima-font-stack;
+      color:$sbx-navy;
+      font-weight: 900;
+    }
+  }
+
+// pup up modal
+
+.portfolio-modal{
+  padding-top:200px;
+  .modal-content{
+    
+    .close-modal{
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      background-color: transparent;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+      .lr{
+        height: 75px;
+        width: 1px;
+        margin-left: 35px;
+        background-color: #2C3E50;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        z-index: 1051;
+        .rl{
+          height: 75px;
+          width: 1px;
+          background-color: #2C3E50;
+          transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+          z-index: 1052;
+        }
+          .leader{
+
+          }
+        }
+      }
+    }
+    .container{
+      .modal-body{
+
+      }
+      .button{
+
+      }
+    }
+}
+
+
 }

@@ -1,0 +1,13 @@
+$adelle-font-stack: adelle, serif;
+$proxima-font-stack: proxima-nova, sans-serif;
+
+$adelle-font-stack-default: adelle, serif !default;
+$proxima-font-stack-default: proxima-nova, sans-serif !default;
+
+div, p, span {
+  font-family: $adelle-font-stack-default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $proxima-font-stack-default;
+}
