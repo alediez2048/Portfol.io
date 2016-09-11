@@ -6226,6 +6226,11 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.main-header {
+  color: #FFFFFF;
+  background-color: #0A2C34;
+  padding: 15px; }
+
 body .section-about-hero {
   height: 500px;
   width: 100%;
